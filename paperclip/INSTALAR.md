@@ -6,10 +6,26 @@ Roda localmente, sem conta no Paperclip.
 
 ## Requisitos
 
-- Linux ou macOS (no Windows, use WSL2)
+- Linux, macOS ou Windows com WSL2 (o Prompt de Comando/PowerShell não roda `bash`)
 - Node.js **24.11 ou mais novo** (o instalador instala se faltar)
 
-## Instalar
+## Windows (WSL2)
+
+1. Abra o **PowerShell como administrador** e rode `wsl --install`. Reinicie o PC.
+2. Abra o app **Ubuntu** no menu Iniciar e crie usuário e senha.
+3. No terminal do Ubuntu:
+
+   ```bash
+   curl -fsSLO https://paperclip.ing/install.sh
+   curl -fsSLO https://paperclip.ing/install.sh.sha256
+   sha256sum -c install.sh.sha256
+   bash install.sh
+   ```
+
+   Se pedir senha, é a do usuário do Ubuntu (ele instala o Node.js com `sudo`).
+4. Sempre rode `paperclipai` pelo Ubuntu e abra **http://localhost:3100** no navegador do Windows.
+
+## Instalar (Linux/macOS)
 
 ```bash
 bash paperclip/instalar.sh
