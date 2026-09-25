@@ -23,6 +23,16 @@ Roda localmente, sem conta no Paperclip.
    ```
 
    Se pedir senha, é a do usuário do Ubuntu (ele instala o Node.js com `sudo`).
+   Em `Run this command? [y/N]`, digite `y`: só Enter cancela a instalação.
+
+   Se o Ubuntu já tiver um Node.js antigo (erro `requires Node.js 24.11.0 or newer`),
+   atualize e rode `bash install.sh` de novo:
+
+   ```bash
+   curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash -
+   sudo apt-get install -y nodejs
+   hash -r && node --version   # tem que mostrar v24
+   ```
 4. Sempre rode `paperclipai` pelo Ubuntu e abra **http://localhost:3100** no navegador do Windows.
 
 ## Instalar (Linux/macOS)
