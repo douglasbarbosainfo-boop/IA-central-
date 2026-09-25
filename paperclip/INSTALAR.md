@@ -50,6 +50,11 @@ paperclipai service restart
 
 Depois clique em **Conectar** na tela "Conecte um modelo".
 
+### Erro `insertBefore` / "Esta página apresentou um erro"
+
+É a tradução automática do Chrome quebrando a página. Clique no ícone de tradução
+na barra de endereço, escolha **Mostrar original** e **Nunca traduzir este site**.
+
 ## Instalar (Linux/macOS)
 
 ```bash
