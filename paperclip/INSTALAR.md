@@ -35,6 +35,21 @@ Roda localmente, sem conta no Paperclip.
    ```
 4. Sempre rode `paperclipai` pelo Ubuntu e abra **http://localhost:3100** no navegador do Windows.
 
+### Conectar a assinatura do Claude
+
+No Ubuntu, instale o Claude Code, faça login e deixe o `claude` visível para o
+serviço do Paperclip (o serviço não enxerga `~/.local/bin`):
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+claude auth login
+sudo ln -sf "$HOME/.local/bin/claude" /usr/local/bin/claude
+paperclipai service restart
+```
+
+Depois clique em **Conectar** na tela "Conecte um modelo".
+
 ## Instalar (Linux/macOS)
 
 ```bash
